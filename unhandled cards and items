@@ -1,0 +1,9 @@
+minion 5
+minion 20
+poison buff on cell is not handled
+spell 19
+items 10
+item 3
+item 12
+بعضی از کارت ها is self targeting رو برداشتم واسشون برداشتم 
+باید برای ON_SPAWN بزنم که وقتی گذاشته شدن startTurn باف هاشون تنظیم بشه

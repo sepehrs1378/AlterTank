@@ -1,0 +1,3 @@
+/home/sepehr/Desktop/alter_tank/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sepehr/Desktop/alter_tank/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sepehr/Desktop/alter_tank/cmake-build-debug/CMakeFiles/alter_tank.dir

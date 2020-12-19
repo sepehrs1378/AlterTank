@@ -1,0 +1,39 @@
+win_point p1pt p2pt countdown
+count_rows count_columns
+//walls
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+//
+tank_1: angle x y is_dead fbomb laser mine
+//bullet_1: x y angle life_time is_active
+.
+.
+.
+.
+//
+tank_2: ...
+//bullet_2: ..........
+.
+.
+.
+.
+//
+//powerup: x y type is_full
+.
+.
+.
+.
+.
+.
+.
+//
+

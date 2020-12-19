@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/alter_tank.dir/main.c.o CMakeFiles/alter_tank.dir/logic.c.o CMakeFiles/alter_tank.dir/view.c.o CMakeFiles/alter_tank.dir/physics.c.o CMakeFiles/alter_tank.dir/maze_builder.c.o CMakeFiles/alter_tank.dir/menu.c.o CMakeFiles/alter_tank.dir/powerup.c.o CMakeFiles/alter_tank.dir/SaveLoad.c.o  -o alter_tank -lm -lSDL2 -lSDL2_gfx 

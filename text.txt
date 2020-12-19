@@ -1,0 +1,3960 @@
+case SDLK_0:
+                    if(tank_1->left_key=='0') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='0') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='0') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='0') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='0') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='0') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='0') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='0') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='0') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='0') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_1:
+                    if(tank_1->left_key=='1') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='1') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='1') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='1') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='1') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='1') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='1') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='1') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='1') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='1') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_2:
+                    if(tank_1->left_key=='2') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='2') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='2') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='2') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='2') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='2') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='2') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='2') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='2') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='2') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_3:
+                    if(tank_1->left_key=='3') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='3') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='3') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='3') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='3') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='3') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='3') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='3') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='3') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='3') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_4:
+                    if(tank_1->left_key=='4') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='4') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='4') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='4') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='4') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='4') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='4') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='4') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='4') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='4') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_5:
+                    if(tank_1->left_key=='5') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='5') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='5') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='5') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='5') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='5') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='5') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='5') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='5') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='5') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_6:
+                    if(tank_1->left_key=='6') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='6') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='6') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='6') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='6') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='6') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='6') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='6') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='6') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='6') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_7:
+                    if(tank_1->left_key=='7') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='7') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='7') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='7') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='7') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='7') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='7') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='7') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='7') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='7') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_8:
+                    if(tank_1->left_key=='8') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='8') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='8') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='8') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='8') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='8') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='8') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='8') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='8') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='8') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_9:
+                    if(tank_1->left_key=='9') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='9') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='9') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='9') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='9') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='9') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='9') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='9') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='9') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='9') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_<:
+                    if(tank_1->left_key=='<') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='<') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='<') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='<') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='<') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='<') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='<') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='<') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='<') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='<') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_>:
+                    if(tank_1->left_key=='>') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='>') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='>') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='>') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='>') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='>') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='>') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='>') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='>') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='>') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_^:
+                    if(tank_1->left_key=='^') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='^') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='^') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='^') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='^') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='^') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='^') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='^') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='^') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='^') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_a:
+                    if(tank_1->left_key=='a') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='a') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='a') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='a') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='a') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='a') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='a') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='a') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='a') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='a') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_b:
+                    if(tank_1->left_key=='b') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='b') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='b') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='b') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='b') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='b') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='b') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='b') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='b') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='b') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_c:
+                    if(tank_1->left_key=='c') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='c') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='c') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='c') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='c') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='c') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='c') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='c') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='c') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='c') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_d:
+                    if(tank_1->left_key=='d') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='d') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='d') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='d') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='d') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='d') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='d') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='d') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='d') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='d') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_e:
+                    if(tank_1->left_key=='e') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='e') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='e') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='e') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='e') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='e') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='e') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='e') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='e') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='e') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_f:
+                    if(tank_1->left_key=='f') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='f') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='f') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='f') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='f') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='f') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='f') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='f') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='f') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='f') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_g:
+                    if(tank_1->left_key=='g') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='g') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='g') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='g') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='g') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='g') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='g') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='g') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='g') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='g') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_h:
+                    if(tank_1->left_key=='h') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='h') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='h') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='h') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='h') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='h') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='h') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='h') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='h') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='h') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_i:
+                    if(tank_1->left_key=='i') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='i') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='i') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='i') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='i') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='i') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='i') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='i') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='i') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='i') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_j:
+                    if(tank_1->left_key=='j') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='j') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='j') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='j') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='j') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='j') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='j') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='j') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='j') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='j') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_k:
+                    if(tank_1->left_key=='k') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='k') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='k') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='k') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='k') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='k') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='k') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='k') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='k') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='k') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_l:
+                    if(tank_1->left_key=='l') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='l') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='l') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='l') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='l') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='l') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='l') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='l') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='l') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='l') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_m:
+                    if(tank_1->left_key=='m') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='m') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='m') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='m') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='m') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='m') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='m') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='m') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='m') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='m') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_n:
+                    if(tank_1->left_key=='n') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='n') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='n') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='n') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='n') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='n') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='n') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='n') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='n') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='n') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_o:
+                    if(tank_1->left_key=='o') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='o') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='o') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='o') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='o') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='o') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='o') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='o') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='o') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='o') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_p:
+                    if(tank_1->left_key=='p') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='p') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='p') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='p') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='p') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='p') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='p') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='p') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='p') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='p') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_q:
+                    if(tank_1->left_key=='q') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='q') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='q') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='q') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='q') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='q') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='q') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='q') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='q') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='q') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_r:
+                    if(tank_1->left_key=='r') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='r') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='r') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='r') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='r') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='r') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='r') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='r') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='r') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='r') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_s:
+                    if(tank_1->left_key=='s') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='s') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='s') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='s') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='s') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='s') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='s') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='s') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='s') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='s') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_t:
+                    if(tank_1->left_key=='t') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='t') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='t') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='t') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='t') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='t') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='t') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='t') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='t') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='t') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_u:
+                    if(tank_1->left_key=='u') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='u') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='u') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='u') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='u') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='u') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='u') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='u') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='u') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='u') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_v:
+                    if(tank_1->left_key=='v') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='v') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='v') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='v') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='v') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='v') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='v') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='v') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='v') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='v') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_w:
+                    if(tank_1->left_key=='w') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='w') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='w') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='w') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='w') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='w') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='w') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='w') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='w') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='w') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_x:
+                    if(tank_1->left_key=='x') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='x') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='x') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='x') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='x') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='x') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='x') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='x') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='x') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='x') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_y:
+                    if(tank_1->left_key=='y') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='y') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='y') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='y') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='y') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='y') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='y') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='y') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='y') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='y') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_z:
+                    if(tank_1->left_key=='z') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='z') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='z') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='z') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='z') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='z') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='z') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='z') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='z') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='z') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;
+case SDLK_|:
+                    if(tank_1->left_key=='|') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? tank_1->move_status : 1;
+                        break;
+                    }
+                    if(tank_1->right_key=='|') {
+                        tank_1->turn_status = tank_1->move_status != 0 ? -tank_1->move_status : -1;
+                        break;
+                    }
+                    if(tank_1->down_key=='|') {
+                        tank_1->move_status = -1;
+                        break;
+                    }
+                    if(tank_1->up_key=='|') {
+                        tank_1->move_status = 1;
+                        break;
+                    }
+                    if(tank_1->fire_key=='|') {
+                        if (tank_1->laser == 3000) {
+                            tank_1->laser = 2999;
+                            break;
+                        }
+                        if (tank_1->mine != 0) {
+                            (tank_1->mine)--;
+                            set_mine(mines,tank_1->x,tank_1->y);
+                            break;
+                        }
+                        if (tank_1->fbomb != 0) {
+                            if(tank_1->fbomb==1){
+                                tank_1->fbomb=2;
+
+                            }
+                            if(tank_1->fbomb==3){
+                                fragbomb_explode(tank_1->fragbomb);
+                                tank_1->fbomb=0;
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_1->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_1->bullet);
+                            (tank_1->bullet + temp)->life_time = 0;
+                            (tank_1->bullet + temp)->is_active = 1;
+                            int X = (tank_1->x) + tank_radius * 1.1 * cos(tank_1->angle);
+                            int Y = (tank_1->y) - tank_radius * 1.1 * sin(tank_1->angle);
+                            (tank_1->bullet + temp)->x = X;
+                            (tank_1->bullet + temp)->y = Y;
+                            (tank_1->bullet + temp)->angle = tank_1->angle;
+                        }
+                        break;
+                    }
+                    if(tank_2->left_key=='|') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? tank_2->move_status : 1;
+                        break;
+                    }
+                    if(tank_2->right_key=='|') {
+                        tank_2->turn_status = tank_2->move_status != 0 ? -tank_2->move_status : -1;
+                        break;
+                    }
+                    if(tank_2->down_key=='|') {
+                        tank_2->move_status = -1;
+                        break;
+                    }
+                    if(tank_2->up_key=='|') {
+                        tank_2->move_status = 1;
+                        break;
+                    }
+                    if(tank_2->fire_key=='|') {
+                        if (tank_2->laser == 3000) {
+                            tank_2->laser = 2999;
+                            break;
+                        }
+                        if (tank_2->mine != 0) {
+                            (tank_2->mine)--;
+                            set_mine(mines,tank_2->x,tank_2->y);
+                            break;
+                        }
+                        if (tank_2->fbomb != 0) {
+                            if(tank_2->fbomb==1){
+                                tank_2->fbomb=2;
+                            }
+                            if(tank_2->fbomb==3){
+                                tank_2->fbomb=0;
+                                fragbomb_explode(tank_2->fragbomb);
+                            }
+                            break;
+                        }
+                        if (tell_ready_bullet(tank_2->bullet) != -1) {
+                            int temp = tell_ready_bullet(tank_2->bullet);
+                            (tank_2->bullet + temp)->life_time = 0;
+                            (tank_2->bullet + temp)->is_active = 1;
+                            int X = (tank_2->x) + tank_radius * 1.1 * cos(tank_2->angle);
+                            int Y = (tank_2->y) - tank_radius * 1.1 * sin(tank_2->angle);
+                            (tank_2->bullet + temp)->x = X;
+                            (tank_2->bullet + temp)->y = Y;
+                            (tank_2->bullet + temp)->angle = tank_2->angle;
+                        }
+                        break;
+                    }
+                    break;

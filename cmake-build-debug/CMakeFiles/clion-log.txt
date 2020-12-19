@@ -1,0 +1,4 @@
+"/home/sepehr/programs/JetBrains CLion 2018.2.6 Linux/clion-2018.2.6/bin/cmake/linux/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sepehr/Desktop/alter_tank
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sepehr/Desktop/alter_tank/cmake-build-debug
